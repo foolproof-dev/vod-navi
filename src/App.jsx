@@ -4,12 +4,16 @@ import DiagnoseForm from './components/DiagnoseForm';
 import ResultDisplay from './components/ResultDisplay';
 import ServiceDetailTemplate from './components/ServiceDetailTemplate';
 import vodServices from './data/vodServices';
+import SearchForm from './components/SearchForm';
 
 // 仮のコンポーネント
 const HomePage = () => (
   <div>
     <h1>VODナビ / VOD-Navi</h1>
     <p>あなたにぴったりの動画配信サービスを見つけよう！</p>
+
+    <SearchForm />
+
     <nav>
       <Link to="/diagnose">Start Diagnosis</Link>
     </nav>

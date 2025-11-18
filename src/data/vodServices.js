@@ -2,6 +2,7 @@ const vodServices = [
   {
     id: 'netflix',
     name: 'Netflix',
+    tmdb_provider_id: 8, // TMDB Provider ID
     logo: '/logos/netflix.png', // 後で追加
     monthly_fee: {
       basic: 790, // 広告つきスタンダード
@@ -41,6 +42,7 @@ const vodServices = [
   {
     id: 'u-next',
     name: 'U-NEXT',
+    tmdb_provider_id: 84, // TMDB Provider ID
     logo: '/logos/u-next.png', // 後で追加
     monthly_fee: {
       standard: 2189,
@@ -78,6 +80,7 @@ const vodServices = [
   {
     id: 'amazon-prime-video',
     name: 'Amazon Prime Video',
+    tmdb_provider_id: 9, // TMDB Provider ID
     logo: '/logos/amazon-prime-video.png', // 後で追加
     monthly_fee: {
       standard: 600, // プライム会員費
@@ -116,6 +119,7 @@ const vodServices = [
   {
     id: 'd-anime-store',
     name: 'dアニメストア',
+    tmdb_provider_id: 2494, // TMDB Provider ID (dAnime Amazon Channel)
     logo: '/logos/d-anime-store.png', // 後で追加
     monthly_fee: {
       standard: 550,
@@ -149,6 +153,121 @@ const vodServices = [
       { title: '銀魂', genre: 'アニメ/コメディ' },
     ],
     link: 'https://animestore.docomo.ne.jp/',
+  },
+  {
+    id: 'hulu',
+    name: 'Hulu',
+    tmdb_provider_id: 15,
+    logo: '/logos/hulu.png', // 後で追加
+    monthly_fee: {
+      standard: 1026,
+    },
+    features: {
+      mainInterests: ['海外ドラマ', '国内ドラマ', 'アニメ', 'バラエティ・お笑い'],
+      genres: ['アクション', 'SF', 'ファンタジー', 'コメディ', '恋愛', 'サスペンス', 'ホラー', 'ヒューマンドラマ', 'ドキュメンタリー'],
+      priorities: ['独占・オリジナル作品', '最新作の速さ'],
+      originalContent: true, // 日テレ系コンテンツ
+      latestContent: true, // 日テレ系コンテンツ
+      familyFriendly: true,
+      download: true,
+      simultaneousViewing: 4,
+      totalWorks: '14万本以上',
+    },
+    description: '14万本以上の映画・ドラマ・アニメ・バラエティが見放題。日本テレビ系の見逃し配信やHuluオリジナル作品も豊富。',
+    pros: [
+      '日本テレビ系のドラマやバラエティが充実',
+      '海外ドラマのラインナップが豊富',
+      '1つのアカウントで最大4台まで同時視聴可能',
+      'ライブTVでスポーツやニュースも楽しめる'
+    ],
+    cons: [
+      '無料トライアル期間がない',
+      'ダウンロード機能に制限がある',
+      '最新映画の配信は少し遅め'
+    ],
+    recommendedWorks: [
+      { title: 'ウォーキング・デッド', genre: '海外ドラマ/ホラー' },
+      { title: '君と世界が終わる日に', genre: '国内ドラマ/サスペンス' },
+      { title: '月曜から夜ふかし', genre: 'バラエティ' },
+    ],
+    link: 'https://www.hulu.jp/',
+  },
+  {
+    id: 'disney-plus',
+    name: 'Disney+',
+    tmdb_provider_id: 337,
+    logo: '/logos/disney-plus.png', // 後で追加
+    monthly_fee: {
+      standard: 1140,
+      premium: 1520,
+    },
+    features: {
+      mainInterests: ['映画', '海外ドラマ', 'アニメ'],
+      genres: ['アクション', 'SF', 'ファンタジー', 'コメディ', '恋愛', 'キッズ'],
+      priorities: ['独占・オリジナル作品', '家族での利用'],
+      originalContent: true,
+      latestContent: false,
+      familyFriendly: true,
+      download: true,
+      simultaneousViewing: 4, // プレミアムプランの場合
+      totalWorks: '16,000本以上',
+    },
+    description: 'ディズニー、ピクサー、マーベル、スター・ウォーズ、ナショナルジオグラフィック、スターの6大ブランドの作品が見放題。',
+    pros: [
+      'ディズニーやマーベルなどの独占配信作品が豊富',
+      '4K UHDやドルビーアトモス対応作品も多い（プレミアム）',
+      '家族で楽しめる作品が充実',
+      'オリジナル作品のクオリティが高い'
+    ],
+    cons: [
+      '無料トライアル期間がない',
+      '他のサービスに比べて作品数は少なめ',
+      '日本のドラマやバラエティは少ない'
+    ],
+    recommendedWorks: [
+      { title: 'マンダロリアン', genre: 'SF/アクション' },
+      { title: 'ワンダヴィジョン', genre: 'SF/サスペンス' },
+      { title: 'アナと雪の女王', genre: 'アニメ/ファンタジー' },
+    ],
+    link: 'https://www.disneyplus.com/ja-jp',
+  },
+  {
+    id: 'fod',
+    name: 'FOD',
+    tmdb_provider_id: 2498, // FOD Channel Amazon Channel
+    logo: '/logos/fod.png', // 後で追加
+    monthly_fee: {
+      standard: 976,
+    },
+    features: {
+      mainInterests: ['国内ドラマ', 'バラエティ・お笑い', 'アニメ'],
+      genres: ['恋愛', 'ヒューマンドラマ', 'コメディ', 'サスペンス'],
+      priorities: ['独占・オリジナル作品', '最新作の速さ'],
+      originalContent: true,
+      latestContent: true,
+      familyFriendly: true,
+      download: true,
+      simultaneousViewing: 1,
+      totalWorks: '10万本以上',
+    },
+    description: 'フジテレビのドラマやバラエティが豊富！FODでしか見られない独占配信やオリジナル作品も多数。',
+    pros: [
+      'フジテレビの最新ドラマや過去の名作が見放題',
+      '200誌以上の人気雑誌が読み放題',
+      '毎月もらえるポイントでレンタル作品や電子書籍も楽しめる',
+      'FOD独占のオリジナル作品が充実'
+    ],
+    cons: [
+      '同時視聴ができない',
+      '海外ドラマや映画は少なめ',
+      '無料トライアル期間がない'
+    ],
+    recommendedWorks: [
+      { title: 'ミステリと言う勿れ', genre: '国内ドラマ/ミステリー' },
+      { title: 'silent', genre: '国内ドラマ/恋愛' },
+      { title: '人志松本のすべらない話', genre: 'バラエティ' },
+    ],
+    link: 'https://fod.fujitv.co.jp/',
   },
 ];
 

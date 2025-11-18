@@ -1,0 +1,86 @@
+/* src/components/SearchForm.css */
+
+.search-container {
+  margin-bottom: 40px;
+}
+
+.search-results-detail {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+.movie-detail-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.movie-poster {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-info h4 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.movie-overview {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.watch-providers h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.watch-providers-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.watch-provider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px; /* プロバイダーロゴのアイテム幅 */
+}
+
+.watch-provider-item img {
+  width: 50px; /* プロバイダーロゴのサイズ */
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 1px solid #eee;
+}
+
+.watch-provider-item span {
+  font-size: 0.75rem;
+  color: #666;
+  word-break: break-word; /* 長い名前を折り返す */
+}
+
+.error-message {
+  color: #d9534f;
+  margin-top: 10px;
+}

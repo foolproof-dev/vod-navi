@@ -35,6 +35,25 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* Diagnosis Button Styles */
+.diagnosis-button {
+  display: inline-block;
+  background-color: #28a745; /* Green button */
+  color: white !important; /* Override default link color */
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none !important; /* Remove underline */
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.diagnosis-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
 /* HomePage Styles */
 .service-list {
   display: grid;

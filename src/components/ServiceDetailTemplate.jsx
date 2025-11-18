@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import vodServices from '../data/vodServices'; // VODサービスデータをインポート
+import { getPopularMovies, getDiscoverMoviesByProvider, getImageUrl } from '../utils/tmdbApi'; // TMDB API関数をインポート
+import './ServiceDetailTemplate.css'; // スタイルシートをインポート
 
 const ServiceDetailTemplate = () => {
   const { id } = useParams(); // URLからサービスIDを取得
   const service = vodServices.find(s => s.id === id); // 該当するサービスを検索
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      let moviesData;
+      if (service && service.tmdb_provider_id) {
+        // サービス固有の人気映画を取得
+        moviesData = await getDiscoverMoviesByProvider(service.tmdb_provider_id);
+      } else {
+        // サービス固有のIDがない場合は、一般的な人気映画を取得
+        moviesData = await getPopularMovies();
+      }
+
+      if (moviesData && moviesData.results) {
+        setPopularMovies(moviesData.results.slice(0, 10)); // 上位10件を表示
+      }
+    };
+
+    fetchMovies();
+  }, [service]); // serviceが変更されたら再実行
 
   if (!service) {
     return (
@@ -52,6 +74,23 @@ const ServiceDetailTemplate = () => {
           </div>
         </section>
       )}
+
+      {/* TMDBからの人気映画 */}
+      <section className="tmdb-popular-movies-section">
+        <h2>{service.name}で人気の映画</h2>
+        <div className="tmdb-works-grid">
+          {popularMovies.length > 0 ? (
+            popularMovies.map((movie) => (
+              <div key={movie.id} className="tmdb-work-item">
+                <img src={getImageUrl(movie.poster_path)} alt={movie.title} className="tmdb-work-image" />
+                <h3>{movie.title}</h3>
+              </div>
+            ))
+          ) : (
+            <p>{service.name}で利用可能な人気映画は見つかりませんでした。</p>
+          )}
+        </div>
+      </section>
 
       {/* 料金プラン */}
       {service.monthly_fee && (

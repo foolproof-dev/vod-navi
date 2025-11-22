@@ -9,7 +9,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   background-color: #fff;
 }
 
@@ -62,11 +62,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 80px; /* プロバイダーロゴのアイテム幅 */
+  width: 80px;
+  /* プロバイダーロゴのアイテム幅 */
 }
 
 .watch-provider-item img {
-  width: 50px; /* プロバイダーロゴのサイズ */
+  width: 50px;
+  /* プロバイダーロゴのサイズ */
   height: 50px;
   object-fit: contain;
   border-radius: 4px;
@@ -77,10 +79,45 @@
 .watch-provider-item span {
   font-size: 0.75rem;
   color: #666;
-  word-break: break-word; /* 長い名前を折り返す */
+  word-break: break-word;
+  /* 長い名前を折り返す */
 }
 
 .error-message {
   color: #d9534f;
   margin-top: 10px;
+}
+
+/* Search Input Styling */
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.search-container input[type="text"]:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+.search-container button[type="submit"] {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #0369a1;
 }

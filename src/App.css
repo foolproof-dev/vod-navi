@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav ul {
@@ -38,19 +41,55 @@ nav a:hover {
 /* Diagnosis Button Styles */
 .diagnosis-button {
   display: inline-block;
-  background-color: #28a745; /* Green button */
-  color: white !important; /* Override default link color */
+  background-color: #28a745;
+  color: white !important;
   padding: 12px 25px;
   border-radius: 8px;
-  text-decoration: none !important; /* Remove underline */
+  text-decoration: none !important;
   font-weight: bold;
   margin-top: 20px;
   transition: background-color 0.2s, transform 0.2s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Diagnosis Result Button */
+.diagnosis-result-button {
+  display: inline-block;
+  background-color: #28a745;
+  color: white !important;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.diagnosis-result-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+display: inline-block;
+background-color: #28a745;
+/* Green button */
+color: white !important;
+/* Override default link color */
+padding: 12px 25px;
+border-radius: 8px;
+text-decoration: none !important;
+/* Remove underline */
+font-weight: bold;
+margin-top: 20px;
+transition: background-color 0.2s,
+transform 0.2s;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .diagnosis-button:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838;
+  /* Darker green on hover */
   transform: translateY(-2px);
 }
 
@@ -94,7 +133,8 @@ nav a:hover {
   background-color: #fdfdfd;
 }
 
-.diagnose-form h3, .diagnose-form h4 {
+.diagnose-form h3,
+.diagnose-form h4 {
   color: #007bff;
   margin-top: 0;
 }
@@ -108,7 +148,8 @@ nav a:hover {
 .diagnose-form input[type="radio"],
 .diagnose-form input[type="checkbox"] {
   margin-right: 0.8em;
-  transform: scale(1.2); /* 少し大きく表示 */
+  transform: scale(1.2);
+  /* 蟆代＠螟ｧ縺阪￥陦ｨ遉ｺ */
 }
 
 /* ResultDisplay Styles */
@@ -144,8 +185,10 @@ nav a:hover {
 }
 
 .service-recommendation li::before {
-  content: '✔️'; /* チェックマーク */
-  position: absolute;
+  content: '笨費ｸ・;
+
+    /* 繝√ぉ繝・け繝槭・繧ｯ */
+    position: absolute;
   left: 0;
   color: green;
 }
@@ -154,7 +197,8 @@ nav a:hover {
   display: inline-block;
   margin-top: 15px;
   padding: 8px 15px;
-  background-color: #28a745; /* Green button */
+  background-color: #28a745;
+  /* Green button */
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -249,4 +293,76 @@ nav a:hover {
 .service-detail-template th {
   background-color: #e9ecef;
   font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.4);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.site-brand {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  border-left: 5px solid #0284c7;
+  padding-left: 16px;
+  display: inline-block;
+}
+
+.search-button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

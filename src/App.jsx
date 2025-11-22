@@ -21,11 +21,9 @@ const HomePage = () => (
         <Link to="/diagnose" className="diagnosis-button cta-pulse">
           今すぐ無料診断を始める
         </Link>
-        <div className="search-link-container">
-          <Link to="/search" className="text-link">
-            自分で検索する &rarr;
-          </Link>
-        </div>
+        <Link to="/search" className="search-button">
+          作品名で検索する
+        </Link>
       </div>
     </section>
 

@@ -109,7 +109,7 @@ const DiagnoseForm = () => {
           ))}
         </div>
 
-        <button type="submit">診断結果を見る</button>
+        <button type="submit" className="diagnosis-result-button">診断結果を見る</button>
       </form>
     </div>
   );

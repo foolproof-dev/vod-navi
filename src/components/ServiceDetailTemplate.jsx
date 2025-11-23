@@ -44,10 +44,19 @@ const ServiceDetailTemplate = () => {
         {/* <img src={service.logo} alt={`${service.name} Logo`} className="service-logo" /> */}
         <h1>{service.name}</h1>
         <p className="service-description">{service.description}</p>
-        <a href={service.link} target="_blank" rel="noopener noreferrer" className="official-link">
-          [公式サイトはこちら]
-        </a>
       </header>
+
+      {/* アフィリエイトリンクボタン */}
+      <section className="cta-section">
+        <a
+          href={service.affiliateLink || service.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="affiliate-button"
+        >
+          {service.name}の無料体験を始める
+        </a>
+      </section>
 
       {/* 3つの特徴 */}
       <section className="features-section">

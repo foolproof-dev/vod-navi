@@ -349,6 +349,7 @@ const vodServices = [
       { title: 'RIZIN', genre: 'スポーツ/格闘技' },
     ],
     link: 'https://abema.tv/about/premium',
+    affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=45IFX7+EKIXI2+4EKC+60WN6',
   },
 ];
 

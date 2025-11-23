@@ -64,6 +64,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
+        <p className="affiliate-disclosure">当サイトは、サービス紹介の一部でアフィリエイトプログラムを利用しています。</p>
         <p>&copy; {new Date().getFullYear()} VOD-Navi. All rights reserved.</p>
       </footer>
     </>

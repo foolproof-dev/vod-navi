@@ -71,25 +71,8 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-display: inline-block;
-background-color: #28a745;
-/* Green button */
-color: white !important;
-/* Override default link color */
-padding: 12px 25px;
-border-radius: 8px;
-text-decoration: none !important;
-/* Remove underline */
-font-weight: bold;
-margin-top: 20px;
-transition: background-color 0.2s,
-transform 0.2s;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .diagnosis-button:hover {
   background-color: #218838;
-  /* Darker green on hover */
   transform: translateY(-2px);
 }
 
@@ -149,7 +132,6 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 .diagnose-form input[type="checkbox"] {
   margin-right: 0.8em;
   transform: scale(1.2);
-  /* 蟆代＠螟ｧ縺阪￥陦ｨ遉ｺ */
 }
 
 /* ResultDisplay Styles */
@@ -185,10 +167,8 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-recommendation li::before {
-  content: '笨費ｸ・;
-
-    /* 繝√ぉ繝・け繝槭・繧ｯ */
-    position: absolute;
+  content: '✓';
+  position: absolute;
   left: 0;
   color: green;
 }
@@ -198,7 +178,6 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 15px;
   padding: 8px 15px;
   background-color: #28a745;
-  /* Green button */
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -365,4 +344,24 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.site-footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.site-footer p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.affiliate-disclosure {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 12px;
 }

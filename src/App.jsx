@@ -8,6 +8,7 @@ import vodServices from './data/vodServices';
 import SearchForm from './components/SearchForm';
 import SearchPage from './components/SearchPage'; // SearchPageをインポート
 import ScrollToTop from './components/ScrollToTop'; // ScrollToTopをインポート
+import PrivacyPolicy from './components/PrivacyPolicy'; // PrivacyPolicyをインポート
 
 // 仮のコンポーネント
 // 仮のコンポーネント
@@ -60,11 +61,15 @@ function App() {
           <Route path="/result" element={<ResultDisplay />} />
           <Route path="/service/:id" element={<ServiceDetailTemplate />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
 
       <footer className="site-footer">
         <p className="affiliate-disclosure">当サイトは、サービス紹介の一部でアフィリエイトプログラムを利用しています。</p>
+        <div className="footer-links">
+          <Link to="/privacy-policy">プライバシーポリシー</Link>
+        </div>
         <p>&copy; {new Date().getFullYear()} VOD-Navi. All rights reserved.</p>
       </footer>
     </>

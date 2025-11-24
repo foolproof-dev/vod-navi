@@ -52,7 +52,7 @@ const HomePage = () => {
           そんな悩みは、もう終わり。<br />
           <strong>無駄なサブスク代を払うのはやめましょう。</strong>
         </p>
-        
+
         {/* 利用者数カウンター */}
         <div className="user-count-badge animate-fade-in-delay">
           <div className="count-number">{userCount.toLocaleString()}</div>
@@ -88,16 +88,33 @@ const HomePage = () => {
         </div>
       </section>
 
-    <h2 className="section-title">気になるVODサービスから探す</h2>
-    <div className="service-list">
-      {vodServices.map(service => (
-        <Link to={`/service/${service.id}`} key={service.id} className="service-card">
-          {/* <img src={service.logo} alt={`${service.name} Logo`} /> */}
-          <h3>{service.name}</h3>
-        </Link>
-      ))}
+      <h2 className="section-title">気になるVODサービスから探す</h2>
+      <div className="service-list">
+        {vodServices.map(service => (
+          <div key={service.id} className="service-card">
+            <div className="service-card-header">
+              <h3>{service.name}</h3>
+              <p className="service-catchphrase">{service.catchphrase}</p>
+            </div>
+
+            <div className="service-price">
+              <span className="price-label">月額</span>
+              <span className="price-amount">
+                {service.monthly_fee.basic || service.monthly_fee.standard}円
+              </span>
+              {service.monthly_fee.basic && service.monthly_fee.standard && (
+                <span className="price-from">〜</span>
+              )}
+            </div>
+
+            <Link to={`/service/${service.id}`} className="service-cta-button">
+              詳細を見る
+              <span className="arrow">→</span>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 

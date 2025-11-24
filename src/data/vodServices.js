@@ -2,6 +2,7 @@ const vodServices = [
   {
     id: 'netflix',
     name: 'Netflix',
+    catchphrase: '世界が選ぶNo.1',
     tmdb_provider_id: 8, // TMDB Provider ID
     logo: '/logos/netflix.png', // 後で追加
     monthly_fee: {
@@ -42,6 +43,7 @@ const vodServices = [
   {
     id: 'u-next',
     name: 'U-NEXT',
+    catchphrase: '作品数No.1',
     tmdb_provider_id: 84, // TMDB Provider ID
     logo: '/logos/u-next.png', // 後で追加
     monthly_fee: {
@@ -80,6 +82,7 @@ const vodServices = [
   {
     id: 'amazon-prime-video',
     name: 'Amazon Prime Video',
+    catchphrase: 'コスパ最強',
     tmdb_provider_id: 9, // TMDB Provider ID
     logo: '/logos/amazon-prime-video.png', // 後で追加
     monthly_fee: {
@@ -119,6 +122,7 @@ const vodServices = [
   {
     id: 'd-anime-store',
     name: 'dアニメストア',
+    catchphrase: 'アニメ専門',
     tmdb_provider_id: 2494, // TMDB Provider ID (dAnime Amazon Channel)
     logo: '/logos/d-anime-store.png', // 後で追加
     monthly_fee: {
@@ -157,6 +161,7 @@ const vodServices = [
   {
     id: 'hulu',
     name: 'Hulu',
+    catchphrase: '日テレ系充実',
     tmdb_provider_id: 15,
     logo: '/logos/hulu.png', // 後で追加
     monthly_fee: {
@@ -195,6 +200,7 @@ const vodServices = [
   {
     id: 'disney-plus',
     name: 'Disney+',
+    catchphrase: 'ディズニー公式',
     tmdb_provider_id: 337,
     logo: '/logos/disney-plus.png', // 後で追加
     monthly_fee: {
@@ -234,6 +240,7 @@ const vodServices = [
   {
     id: 'fod',
     name: 'FOD',
+    catchphrase: 'フジ系ドラマ',
     tmdb_provider_id: 2498, // FOD Channel Amazon Channel
     logo: '/logos/fod.png', // 後で追加
     monthly_fee: {
@@ -272,6 +279,7 @@ const vodServices = [
   {
     id: 'dmm-tv',
     name: 'DMM TV',
+    catchphrase: '新作アニメ最速',
     tmdb_provider_id: 2427,
     logo: '/logos/dmm-tv.png',
     monthly_fee: {
@@ -312,6 +320,7 @@ const vodServices = [
   {
     id: 'abema-premium',
     name: 'ABEMAプレミアム',
+    catchphrase: '恋愛リアリティ',
     tmdb_provider_id: 2428,
     logo: '/logos/abema-premium.png',
     monthly_fee: {

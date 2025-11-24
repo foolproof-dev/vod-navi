@@ -4,10 +4,10 @@
 .hero-section {
   text-align: center;
   padding: 100px 20px 80px;
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #075985 100%);
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FF8C42 100%);
   border-radius: 20px;
   margin-bottom: 60px;
-  box-shadow: 0 20px 60px -10px rgba(2, 132, 199, 0.5);
+  box-shadow: 0 20px 60px -10px rgba(255, 107, 53, 0.5);
   position: relative;
   overflow: hidden;
 }
@@ -20,19 +20,50 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
   animation: pulse-bg 8s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes pulse-bg {
-  0%, 100% { 
-    transform: scale(1) rotate(0deg); 
-    opacity: 0.3; 
+/* パーティクル効果 */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: 0 0, 40px 40px;
+  animation: particle-float 20s linear infinite;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0);
   }
-  50% { 
-    transform: scale(1.1) rotate(5deg); 
-    opacity: 0.5; 
+
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes pulse-bg {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.5;
   }
 }
 
@@ -54,8 +85,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ブランドロゴ */
@@ -84,17 +122,35 @@
 
 /* ハイライトテキスト */
 .highlight-text {
-  color: #fbbf24;
-  font-size: 3.2rem;
+  color: #FCD34D;
+  font-size: 5rem;
   font-weight: 900;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow:
+    0 0 20px rgba(252, 211, 77, 0.6),
+    0 0 40px rgba(252, 211, 77, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.3);
   display: inline-block;
   animation: pulse-highlight 2s ease-in-out infinite;
 }
 
 @keyframes pulse-highlight {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+
+  0%,
+  100% {
+    transform: scale(1);
+    text-shadow:
+      0 0 20px rgba(252, 211, 77, 0.6),
+      0 0 40px rgba(252, 211, 77, 0.4),
+      2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    transform: scale(1.05);
+    text-shadow:
+      0 0 30px rgba(252, 211, 77, 0.8),
+      0 0 60px rgba(252, 211, 77, 0.5),
+      2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* サブタイトル */
@@ -110,7 +166,7 @@
 
 .hero-sub strong {
   font-weight: 700;
-  color: #fbbf24;
+  color: #FCD34D;
 }
 
 /* 利用者数カウンター */
@@ -128,7 +184,7 @@
 .count-number {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #0284c7;
+  color: #FF6B35;
   line-height: 1;
   margin-bottom: 5px;
 }
@@ -213,9 +269,12 @@
 }
 
 @keyframes pulse-cta {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
   }
+
   50% {
     box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6), 0 0 0 8px rgba(16, 185, 129, 0.2);
   }
@@ -277,16 +336,22 @@
 
 /* アニメーション */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(30px);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -332,7 +397,7 @@
   }
 
   .highlight-text {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
   }
 
   .hero-sub {
@@ -379,7 +444,7 @@
   }
 
   .highlight-text {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 
   .hero-features {

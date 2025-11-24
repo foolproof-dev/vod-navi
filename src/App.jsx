@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './components/HeroSection.css';
+import './components/ServiceCards.css';
 import DiagnoseForm from './components/DiagnoseForm';
 import ResultDisplay from './components/ResultDisplay';
 import ServiceDetailTemplate from './components/ServiceDetailTemplate';

@@ -122,12 +122,12 @@
 
 /* ハイライトテキスト */
 .highlight-text {
-  color: #FCD34D;
+  color: #FF8C00;
   font-size: 5rem;
   font-weight: 900;
   text-shadow:
-    0 0 20px rgba(252, 211, 77, 0.6),
-    0 0 40px rgba(252, 211, 77, 0.4),
+    0 0 20px rgba(255, 140, 0, 0.8),
+    0 0 40px rgba(255, 140, 0, 0.6),
     2px 2px 4px rgba(0, 0, 0, 0.3);
   display: inline-block;
   animation: pulse-highlight 2s ease-in-out infinite;
@@ -139,16 +139,16 @@
   100% {
     transform: scale(1);
     text-shadow:
-      0 0 20px rgba(252, 211, 77, 0.6),
-      0 0 40px rgba(252, 211, 77, 0.4),
+      0 0 20px rgba(255, 140, 0, 0.8),
+      0 0 40px rgba(255, 140, 0, 0.6),
       2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   50% {
     transform: scale(1.05);
     text-shadow:
-      0 0 30px rgba(252, 211, 77, 0.8),
-      0 0 60px rgba(252, 211, 77, 0.5),
+      0 0 30px rgba(255, 140, 0, 1),
+      0 0 60px rgba(255, 140, 0, 0.7),
       2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
@@ -166,7 +166,7 @@
 
 .hero-sub strong {
   font-weight: 700;
-  color: #FCD34D;
+  color: #FF8C00;
 }
 
 /* 利用者数カウンター */

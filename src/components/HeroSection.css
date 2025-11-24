@@ -1,0 +1,399 @@
+/* Hero Section Enhanced Styles */
+
+/* Hero Section Base */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #075985 100%);
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 0 20px 60px -10px rgba(2, 132, 199, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 背景アニメーション効果 */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse-bg 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-bg {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 0.3; 
+  }
+  50% { 
+    transform: scale(1.1) rotate(5deg); 
+    opacity: 0.5; 
+  }
+}
+
+/* バッジ */
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ブランドロゴ */
+.site-brand {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* メインタイトル */
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  line-height: 1.3;
+  color: #ffffff;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+/* ハイライトテキスト */
+.highlight-text {
+  color: #fbbf24;
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  animation: pulse-highlight 2s ease-in-out infinite;
+}
+
+@keyframes pulse-highlight {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* サブタイトル */
+.hero-sub {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-sub strong {
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+/* 利用者数カウンター */
+.user-count-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  border-radius: 16px;
+  margin: 20px 0 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.count-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0284c7;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.count-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* CTAグループ */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 診断ボタン - Enhanced */
+.diagnosis-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white !important;
+  padding: 18px 40px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnosis-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.diagnosis-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.diagnosis-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.5);
+}
+
+.diagnosis-button:active {
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.button-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* CTAパルスアニメーション */
+.cta-pulse {
+  animation: pulse-cta 2s ease-in-out infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6), 0 0 0 8px rgba(16, 185, 129, 0.2);
+  }
+}
+
+/* 検索ボタン */
+.search-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none !important;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ヒーローの特徴セクション */
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.feature-text {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.animate-slide-up-delay {
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.animate-slide-up-delay-2 {
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 1s ease-out 0.8s both;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 15px 50px;
+    border-radius: 16px;
+  }
+
+  .site-brand {
+    font-size: 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .highlight-text {
+    font-size: 2.4rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .user-count-badge {
+    padding: 15px 30px;
+  }
+
+  .count-number {
+    font-size: 2rem;
+  }
+
+  .diagnosis-button {
+    font-size: 1rem;
+    padding: 16px 32px;
+  }
+
+  .hero-features {
+    gap: 30px;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+  }
+
+  .feature-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 50px 10px 40px;
+  }
+
+  .site-brand {
+    font-size: 1.75rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .highlight-text {
+    font-size: 2rem;
+  }
+
+  .hero-features {
+    gap: 20px;
+  }
+
+  .cta-group {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .diagnosis-button,
+  .search-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

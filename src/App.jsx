@@ -1,6 +1,7 @@
-
+import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import './components/HeroSection.css';
 import DiagnoseForm from './components/DiagnoseForm';
 import ResultDisplay from './components/ResultDisplay';
 import ServiceDetailTemplate from './components/ServiceDetailTemplate';
@@ -12,23 +13,80 @@ import PrivacyPolicy from './components/PrivacyPolicy'; // PrivacyPolicyをイ�
 import TermsOfService from './components/TermsOfService'; // TermsOfServiceをインポート
 import ContactPage from './components/ContactPage'; // ContactPageをインポート
 
-// 仮のコンポーネント
-// 仮のコンポーネント
-const HomePage = () => (
-  <div>
-    <section className="hero-section">
-      <div className="site-brand">VOD-Navi</div>
-      <h1>あなたにぴったりのVODが<br />30秒で見つかる</h1>
-      <p className="hero-sub">「どれを選べばいいかわからない…」<br />そんな悩みは、もう終わり。無駄なサブスク代を払うのはやめましょう。</p>
-      <div className="cta-group">
-        <Link to="/diagnose" className="diagnosis-button cta-pulse">
-          今すぐ無料診断を始める
-        </Link>
-        <Link to="/search" className="search-button">
-          作品名で検索する
-        </Link>
-      </div>
-    </section>
+// ホームページコンポーネント
+const HomePage = () => {
+  const [userCount, setUserCount] = useState(0);
+  const targetCount = 15280; // 目標の利用者数
+
+  // カウントアップアニメーション
+  useEffect(() => {
+    const duration = 2000; // 2秒
+    const steps = 60;
+    const increment = targetCount / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetCount) {
+        setUserCount(targetCount);
+        clearInterval(timer);
+      } else {
+        setUserCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div>
+      <section className="hero-section">
+        <div className="hero-badge">🎬 VOD選びの新常識</div>
+        <div className="site-brand animate-fade-in">VOD-Navi</div>
+        <h1 className="animate-slide-up">
+          あなたにぴったりのVODが<br />
+          <span className="highlight-text">30秒</span>で見つかる
+        </h1>
+        <p className="hero-sub animate-slide-up-delay">
+          「どれを選べばいいかわからない…」<br />
+          そんな悩みは、もう終わり。<br />
+          <strong>無駄なサブスク代を払うのはやめましょう。</strong>
+        </p>
+        
+        {/* 利用者数カウンター */}
+        <div className="user-count-badge animate-fade-in-delay">
+          <div className="count-number">{userCount.toLocaleString()}</div>
+          <div className="count-label">人が利用中</div>
+        </div>
+
+        <div className="cta-group animate-slide-up-delay-2">
+          <Link to="/diagnose" className="diagnosis-button cta-pulse">
+            <span className="button-icon">🎯</span>
+            今すぐ無料診断を始める
+            <span className="button-subtitle">たった30秒で完了</span>
+          </Link>
+          <Link to="/search" className="search-button">
+            <span className="button-icon">🔍</span>
+            作品名で検索する
+          </Link>
+        </div>
+
+        {/* 3つの特徴 */}
+        <div className="hero-features animate-fade-in-delay-2">
+          <div className="feature-item">
+            <div className="feature-icon">⚡</div>
+            <div className="feature-text">30秒で診断完了</div>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">💰</div>
+            <div className="feature-text">完全無料</div>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">🎯</div>
+            <div className="feature-text">ピッタリが見つかる</div>
+          </div>
+        </div>
+      </section>
 
     <h2 className="section-title">気になるVODサービスから探す</h2>
     <div className="service-list">
@@ -40,7 +98,8 @@ const HomePage = () => (
       ))}
     </div>
   </div>
-);
+  );
+};
 
 function App() {
   return (

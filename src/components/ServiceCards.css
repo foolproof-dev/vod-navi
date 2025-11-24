@@ -26,14 +26,14 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #FF6B35, #F7931E);
+    background: linear-gradient(90deg, #0284c7, #0369a1);
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 24px rgba(2, 132, 199, 0.2);
 }
 
 .service-card:hover::before {
@@ -53,11 +53,11 @@
 
 .service-catchphrase {
     margin: 0;
-    color: #FF6B35;
+    color: #0284c7;
     font-size: 0.95rem;
     font-weight: 600;
     padding: 6px 16px;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.1), rgba(3, 105, 161, 0.1));
     border-radius: 20px;
     display: inline-block;
 }
@@ -65,7 +65,7 @@
 .service-price {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
     border-radius: 12px;
     margin: 10px 0;
 }
@@ -81,7 +81,7 @@
 .price-amount {
     font-size: 2.2rem;
     font-weight: 900;
-    color: #FF6B35;
+    color: #0284c7;
     display: inline-block;
 }
 

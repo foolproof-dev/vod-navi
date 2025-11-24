@@ -38,18 +38,53 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Diagnosis Button Styles */
+/* Diagnosis Button Styles - Enhanced */
 .diagnosis-button {
-  display: inline-block;
-  background-color: #28a745;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white !important;
-  padding: 12px 25px;
-  border-radius: 8px;
+  padding: 18px 40px;
+  border-radius: 12px;
   text-decoration: none !important;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.15rem;
   margin-top: 20px;
-  transition: background-color 0.2s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnosis-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.diagnosis-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button-icon {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.button-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 /* Diagnosis Result Button */
@@ -72,8 +107,26 @@ nav a:hover {
 }
 
 .diagnosis-button:hover {
-  background-color: #218838;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.5);
+}
+
+.diagnosis-button:active {
   transform: translateY(-2px);
+}
+
+/* CTAパルスアニメーション */
+.cta-pulse {
+  animation: pulse-cta 2s ease-in-out infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6), 0 0 0 8px rgba(16, 185, 129, 0.2);
+  }
 }
 
 /* HomePage Styles */
@@ -573,8 +626,6 @@ nav a:hover {
   transition: color 0.2s;
 }
 
-background-color: #fff;
-}
 
 .privacy-policy-container h1 {
   text-align: center;
@@ -768,8 +819,6 @@ background-color: #fff;
   transition: color 0.2s;
 }
 
-background-color: #fff;
-}
 
 .privacy-policy-container h1 {
   text-align: center;

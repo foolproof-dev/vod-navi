@@ -62,7 +62,6 @@ const HomePage = () => {
 
         <div className="cta-group animate-slide-up-delay-2">
           <Link to="/diagnose" className="diagnosis-button cta-pulse">
-            <span className="button-icon">🎯</span>
             今すぐ無料診断を始める
             <span className="button-subtitle">たった30秒で完了</span>
           </Link>

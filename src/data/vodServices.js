@@ -196,6 +196,7 @@ const vodServices = [
       { title: '月曜から夜ふかし', genre: 'バラエティ' },
     ],
     link: 'https://www.hulu.jp/',
+    affiliateLink: 'https://h.accesstrade.net/sp/cc?rk=0100l6dx00oli4',
   },
   {
     id: 'disney-plus',

@@ -71,7 +71,7 @@ const ResultDisplay = () => {
               {/* その他の理由やサービス固有の強み */}
               <li>月額料金は {service.monthly_fee.standard}円からです。</li>
             </ul>
-            <a href={service.link} target="_blank" rel="noopener noreferrer">
+            <a href={service.affiliateLink || service.link} target="_blank" rel="noopener noreferrer">
               [公式サイトで詳細を見る]
             </a>
           </div>
